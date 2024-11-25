@@ -158,17 +158,130 @@
 
         <section>
             <h2>Галерея</h2>
+            <img src="images/trip1.webp" alt="Фото с прогулки" width="120" height="120"> 
+            <img src="images/trip2.jpg" alt="Фото с прогулки" width="150" height="120"> 
+            <img src="images/trip6.jpg" alt="Фото с прогулки" width="150" height="120">
+            <img src="images/trip4.png" alt="Фото с прогулки" width="150" height="120"> 
+            <img src="images/trip3.jpg" alt="Фото с прогулки" width="150" height="120">
+            <img src="images/trip5.jpg" alt="Фото с прогулки" width="150" height="120">
+            <img src="images/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
+            <img src="images/trip8.webp" alt="Фото с прогулки" width="160" height="120">
         </section>
-        <section>
-            <h2>Отзывы</h2>
+        <section class="reviews">
+            <h2 class="reviews__title title title--centered">Отзывы</h2>
+            <div class="reviews__swiper swiper">
+                <div class="swiper__swiper-wrapper swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper__item ">
+                            <div class="swiper__content">
+                                <h3 class="swiper__title">«Прогулка была воодушевляющая, семья осталась в восторге!»</h3>
+                                <p class="swiper__text">«Решили съездить всей семьей на выходных покататься на лошадях. Долго выбирали куда именно,  
+                                    в итоге решили съездить в конюшню Марий Чодра - и не прогадали!
+                                    Вежливый персонал,
+                                    послушные лошади и красивая природа леса. Обязательно поедем еще)) Уже строим
+                                    планы,
+                                    чтобы
+                                    поехать в следующие выходные. Спасибо большое за такую возможность отвлечься от городской суеты )
+                                </p>
+                                <a href="" class="swiper__link">Читать отзыв полностью</a>
+                            </div>
+                            <div class="swiper__user">
+                                <img src="images/6b072be9ea08041dc33da2447ae21145.jpg" alt="Аватар комментатора"
+                                    class="swiper__user-avatar" width="380" height="380" loading="lazy">
+                                <div class="swiper__user-name">Елизавета Меньшикова</div>
+                                <div class="swiper__user-location">Йошкар-Ола</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__item ">
+                            <div class="swiper__content">
+                                <h3 class="swiper__title">«Лучший досуг за последнее время!»</h3>
+                                <p class="swiper__text">«Съездили покататься на лошадях вместе с молодым человеком на самую длительную прогулку.
+                                    Сначала сомневались, что для первого раза наверное лучше взять самую короткую дистанцию. 
+                                    Но в итоге все прошло замечательно. Это лучшее времяпрепровождение за последнее время. 
+                                    Очень понравились инструкторы, они очень доносчиво доносили до нас информацию и обучали верховой езде. 
+                                    С ними нам было очень комфротно и вовсе не страшно. Хочу отметить красоту осеннего леса, мы попали в разгар золотой осени и это было незабываемо!
+                                    Молодому человеку тоже все очень понравилось, хотя он не любитель активного отдыха.
+                                    Всем искренне советуем съездить в Марий Чодра на конные прогулки!
+                                </p>
+                                <a href="" class="swiper__link">Читать отзыв полностью</a>
+                            </div>
+                            <div class="swiper__user">
+                                <img src="images/9b61eef1c51568592e52b5ee785d6331.jpg" alt="Аватар комментатора"
+                                    class="swiper__user-avatar" width="380" height="380" loading="lazy">
+                                <div class="swiper__user-name">Ирина Лебедева</div>
+                                <div class="swiper__user-location">Козмодемьянск</div>
+                            </div>
+                        </div>
+                    </div>
         </section>
 
     </main>
-    <footer>
-        <form action="/" method="post">
-            <input type="email" placeholder="Введите e-mail">
-        </form>
-        <a>Конные прогулки</a>
+    <footer class="footer container">
+        <div class="container footer__inner">
+            <div class="footer__main">
+                <h2 class="footer__title">Если появились вопросы, укажите ваш телефон</h2>
+                <div class="footer__subtitle">Мы свяжемся с вами в течение 15 минут</div>
+                <form action="#" class="footer__form">
+                    <div class="footer__tel">
+                        <label class="footer__tel-inner">
+                            <input type="tel" class="input-reset footer__input-tel" placeholder="Номер телефона"
+                                name="phone" required>
+                        </label>
+                        <button class="footer__button button button-reset" type="submit">Забронировать время</button>
+                    </div>
+                    <label class="footer__agreement">
+                        <input type="checkbox" class="footer__agreement-input input-reset" name="agreement" value="yes"
+                            required>
+                        <span class="footer__agreement-text"> Нажимая на кнопку, вы соглашаетесь с <a href="#"
+                                class="footer__agreement-link">условиями обработки персональных данных</a></span>
+                    </label>
+                </form>
+            </div>
+        <div>   
+        <h2>Как с нами связаться</h2>
+        <img src="images/phone.png" alt="Контакты" width="25" height="25">
+        <h4>+7 (961) 333-89-59</h4>
+        <img src="images/mail.png" alt="Контакты" width="30" height="30">
+        <h4>e-mail:koniMariyChodra@yandex.ru</h4>
+        <img src="images/vk.png" alt="Контакты" width="30" height="30">
+        <h4>vk.com/konimariychodra</h4>
+        <img src="images/tg.png" alt="Контакты" width="30" height="30">
+        <h4>t.me/koni_MariyChodra</h4>
+        <img src="images/gps.png" alt="Контакты" width="30" height="30">
+        <h4>Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </h4>
+        <a class="footer_logo logo">Koni</a>
+        <p class="footer_copy">©Koni 2024</p>
+        </div>
     </footer>
+    <div class="dialog">
+        <section class="popup">
+            <button class="popur_close" type="button">
+                <img src="images/profile.png" alt="профиль" wight="50" height="50">
+            </button>
+            <h2 class="popur_title">Войдите в профиль</h2>
+            <p class="popup_desc">Забронировать тур могут только зарегестрированные пользователи</p>
+            <div class="popup_buttons">
+                <button class="button button--accent" type="button">Войти</button>
+                <button class="button" type="button">Регистрация</button>
+            </div>
+        </section>
+        <section class="section popup">
+            <button class="popup_close" type="button">
+                <img src="images/pen.png" alt="Закрыть окно" width="50" height="50">
+            </button>
+            <h2 class="popup_title">Войти</h2>
+            <form class="popup_form form" action="/" method="post">
+                <input class="form_field" type="email" name="email" placeholder="Логин" required>
+                <input class="form_field" type="password" name="password" placeholder="Пароль" required>
+                <fieldset class="form_buttons">
+                    <button class="button button--accent" type="submit">Войти</button>
+                    <button class="button" type="button">Отмена</button>
+                </fieldset>
+                <button class="button button--link" type="button">У меня ещё нет аккаунта</button>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
