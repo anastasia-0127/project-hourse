@@ -155,17 +155,18 @@
             </div>
             <img src="images/3000tropa.jpg" alt="Фото с прогулки" width="360" height="360">
         </section>
-
-        <section>
-            <h2>Галерея</h2>
-            <img src="images/trip1.webp" alt="Фото с прогулки" width="120" height="120"> 
-            <img src="images/trip2.jpg" alt="Фото с прогулки" width="150" height="120"> 
-            <img src="images/trip6.jpg" alt="Фото с прогулки" width="150" height="120">
-            <img src="images/trip4.png" alt="Фото с прогулки" width="150" height="120"> 
-            <img src="images/trip3.jpg" alt="Фото с прогулки" width="150" height="120">
-            <img src="images/trip5.jpg" alt="Фото с прогулки" width="150" height="120">
-            <img src="images/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
-            <img src="images/trip8.webp" alt="Фото с прогулки" width="160" height="120">
+        <section  class="gallery">
+            <h2 class="gallery__title">Галерея</h2>
+            <div  class="gallery__list">
+                <img class="gallery__item" src="images/trip1.webp" alt="Фото с прогулки" width="120" height="120"> 
+                <img class="gallery__item" src="images/trip2.jpg" alt="Фото с прогулки" width="150" height="120"> 
+                <img class="gallery__item" src="images/trip6.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip4.png" alt="Фото с прогулки" width="150" height="120"> 
+                <img class="gallery__item" src="images/trip3.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip5.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip8.webp" alt="Фото с прогулки" width="160" height="120">
+            </div>
         </section>
         <section class="reviews">
             <h2 class="reviews__title title title--centered">Отзывы</h2>
@@ -216,11 +217,36 @@
                         </div>
                     </div>
         </section>
-
-    </main>
-    <footer class="footer container">
-        <div class="container footer__inner">
-            <div class="footer__main">
+        <div class="dialog">
+            <section class="popup">
+                <button class="popur_close" type="button">
+                    <img src="images/profile.png" alt="профиль" wight="50" height="50">
+                </button>
+                <h2 class="popur_title">Войдите в профиль</h2>
+                <p class="popup_desc">Забронировать тур могут только зарегестрированные пользователи</p>
+                <div class="popup_buttons">
+                    <button class="button button--accent" type="button">Войти</button>
+                    <button class="button" type="button">Регистрация</button>
+                </div>
+            </section>
+            <section class="section popup">
+                <button class="popup_close" type="button">
+                    <img src="images/pen.png" alt="Закрыть окно" width="50" height="50">
+                </button>
+                <h2 class="popup_title">Войти</h2>
+                <form class="popup_form form" action="/" method="post">
+                    <input class="form_field" type="email" name="email" placeholder="Логин" required>
+                    <input class="form_field" type="password" name="password" placeholder="Пароль" required>
+                    <fieldset class="form_buttons">
+                        <button class="button button--accent" type="submit">Войти</button>
+                        <button class="button" type="button">Отмена</button>
+                    </fieldset>
+                    <button class="button button--link" type="button">У меня ещё нет аккаунта</button>
+                </form>
+            </section>
+        </div>
+        <div class="">
+            <div class="">
                 <h2 class="footer__title">Если появились вопросы, укажите ваш телефон</h2>
                 <div class="footer__subtitle">Мы свяжемся с вами в течение 15 минут</div>
                 <form action="#" class="footer__form">
@@ -239,49 +265,26 @@
                     </label>
                 </form>
             </div>
+    </main>
+    <footer class="footer container">
         <div>   
-        <h2>Как с нами связаться</h2>
-        <img src="images/phone.png" alt="Контакты" width="25" height="25">
-        <h4>+7 (961) 333-89-59</h4>
-        <img src="images/mail.png" alt="Контакты" width="30" height="30">
-        <h4>e-mail:koniMariyChodra@yandex.ru</h4>
-        <img src="images/vk.png" alt="Контакты" width="30" height="30">
-        <h4>vk.com/konimariychodra</h4>
-        <img src="images/tg.png" alt="Контакты" width="30" height="30">
-        <h4>t.me/koni_MariyChodra</h4>
-        <img src="images/gps.png" alt="Контакты" width="30" height="30">
-        <h4>Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </h4>
+           <h2>Как с нами связаться</h2>
+           <img src="images/telephone.svg" alt="Контакты" width="25" height="25">
+           <h4>+7 (961) 333-89-59</h4>
+           <img src="images/email.svg" alt="Контакты" width="30" height="30">
+           <h4>e-mail:koniMariyChodra@yandex.ru</h4>
+           <img src="images/vk.png" alt="Контакты" width="30" height="30">
+           <h4>vk.com/konimariychodra</h4>
+           <img src="images/tg.png" alt="Контакты" width="30" height="30">
+           <h4>t.me/koni_MariyChodra</h4>
+           <img src="images/home.svg" alt="Контакты" width="30" height="30">
+           <h4>Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </h4>
         <a class="footer_logo logo">Koni</a>
         <p class="footer_copy">©Koni 2024</p>
         </div>
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </footer>
-    <div class="dialog">
-        <section class="popup">
-            <button class="popur_close" type="button">
-                <img src="images/profile.png" alt="профиль" wight="50" height="50">
-            </button>
-            <h2 class="popur_title">Войдите в профиль</h2>
-            <p class="popup_desc">Забронировать тур могут только зарегестрированные пользователи</p>
-            <div class="popup_buttons">
-                <button class="button button--accent" type="button">Войти</button>
-                <button class="button" type="button">Регистрация</button>
-            </div>
-        </section>
-        <section class="section popup">
-            <button class="popup_close" type="button">
-                <img src="images/pen.png" alt="Закрыть окно" width="50" height="50">
-            </button>
-            <h2 class="popup_title">Войти</h2>
-            <form class="popup_form form" action="/" method="post">
-                <input class="form_field" type="email" name="email" placeholder="Логин" required>
-                <input class="form_field" type="password" name="password" placeholder="Пароль" required>
-                <fieldset class="form_buttons">
-                    <button class="button button--accent" type="submit">Войти</button>
-                    <button class="button" type="button">Отмена</button>
-                </fieldset>
-                <button class="button button--link" type="button">У меня ещё нет аккаунта</button>
-            </form>
-        </section>
-    </div>
 </body>
 </html>
