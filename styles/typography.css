@@ -1,0 +1,53 @@
+/* Контейнер-обертка */
+.container {
+    min-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Кнопки */
+.button {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+
+    background-color: #037E8C;
+    color: #ffffff;
+
+    border: 1px solid #037E8C;
+    border-radius: 9px;
+    padding: 14px 20px;
+    
+    cursor: pointer;
+}
+
+.header__item-button,
+.footer_item-button {
+    background-color: transparent;
+    color: #037E8C;
+    align-items: center;
+
+    border: 1px transparent;
+
+    cursor: pointer;
+}
+
+/* Заголовки */
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #037E8C;
+}
+
+/* Формы */
+.form__field {
+    border: .5px solid #787878;
+    border-radius: 8px;
+    width: 100%;
+    height: 46px;
+    padding-left: 50px;
+    padding-right: 30px;
+    font-size: 16px;
+    color: #121214;
+}
+

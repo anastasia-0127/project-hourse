@@ -4,256 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конные прогулки</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header class="header container">
-        <a>Конные прогулки</a>
-        <nav>
-            <ul>
-                <li><a href="https://ya.ru/">Маршруты</a></li>
-                <li><a href="https://ya.ru/">Галерея</a></li>
-                <li><a href="https://ya.ru/">Отзывы</a></li>
-                <li><button type="button">Бронирование</button></li>
+        <a class="header__logo logo">Конные прогулки</a>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__item-link" href="#">Маршруты</a></li>
+                <li class="header__item"><a class="header__item-link" href="#">Галерея</a></li>
+                <li class="header__item"><a class="header__item-link" href="#">Отзывы</a></li>
+                <li class="header__item"><button class="header__item-button button" type="button">Бронирование</button></li>
             </ul>
-            <img src="images/phone.svg" alt="Иконка телефона" width="17" height="17">
-            <span>+7 (961) 333-89-59</span>
+            <img class="header__icon" src="images/phone.svg" alt="Иконка телефона" width="17" height="17">
+            <span class="header__contact" >+7 (961) 333-89-59</span>
         </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <h1>Конные прогулки по национальному парку "Марий Чодра" в Республике Марий Эл</h1>
-                <p>Прогулка подарит Вам море эмоций и восторга и оставит новые незабываемые впечатления.</p>
-              <button type="button">Подобрать маршрут</button>
-              <img src="images/arrow.svg" alt="Стрелка" width="16" height="16">
+    <main class="main container">
+        <section class="section promo">
+            <div class="promo__content">
+                <h2 class="promo__title section__title">Конные прогулки по национальному парку "Марий Чодра" в Республике Марий Эл</h2>
+                <p class="promo__description">Прогулка подарит Вам море эмоций и восторга и оставит новые незабываемые впечатления.</p>
+                <button class="promo__button button" type="button">
+                    <span class="promo__button-text">Подобрать маршрут</span>
+                    <img class="promo__button-icon" src="images/arrow1.svg" alt="Стрелка" width="31" height="31">
+                </button>
             </div>
             <!--img src="images/walk.jpg" alt="Фото с прогулки" width="600" height="800" Фото на фон-->
         </section>
-        <section>
-            <div>
-                <h2>Почему выбирают именно нас?</h2>
-                <ul>
-                    <li>
-                        <img src="images/level.svg" alt="Иконка шлема" width="40" height="32">
-                        <h3>Увлекательные экскурсии</h3>
-                        <p>У нас имеются маршруты разной сложности, как для новичков, так и для всадников, которые уверенно держатся в седле. </p>
+        <section class="section advantages">
+            <div class="advantages__content">
+                <h2 class="section__title">Почему выбирают именно нас?</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <img class="advantages__icon" src="images/level.svg" alt="Иконка шлема" width="40" height="32">
+                        <h3 class="advantages__title">Увлекательные экскурсии</h3>
+                        <p class="advantages__description">У нас имеются маршруты разной сложности, как для новичков, так и для всадников, которые уверенно держатся в седле. </p>
                     </li>
-                    <li>
-                        <img src="images/instructor.svg" alt="Иконка инструктора" width="44" height="44">
-                        <h3>Опытные инструктора</h3>
-                        <p>Инструкторы очень подробно объяснят всадникам, как вести себя с лошадью, как управлять ею, научат ездить на разных аллюрах.</p>
+                    <li class="advantages__item">
+                        <img class="advantages__icon" src="images/instructor.svg" alt="Иконка инструктора" width="44" height="44">
+                        <h3 class="advantages__title">Опытные инструктора</h3>
+                        <p class="advantages__description">Инструкторы очень подробно объяснят всадникам, как вести себя с лошадью, как управлять ею, научат ездить на разных аллюрах.</p>
                     </li>
-                    <li>
-                        <img src="images/tree.svg" alt="Иконка дерева" width="36" height="36">
-                        <h3>Живописные пейзажи</h3>
-                        <p>Маршруты проходят по лесной зоне: вы познакомитесь с природой парка, посетите различные исторические и природные объекты.</p>
+                    <li class="advantages__item">
+                        <img class="advantages__icon" src="images/tree.svg" alt="Иконка дерева" width="36" height="36">
+                        <h3 class="advantages__title">Живописные пейзажи</h3>
+                        <p class="advantages__description">Маршруты проходят по лесной зоне: вы познакомитесь с природой парка, посетите различные исторические и природные объекты.</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section>
-            <h2>Наши маршруты</h2>
-            <div>
-                <h3>Шаговая прогулка "По марийскому лесу"</h3>
-                <p>1000 рублей</p>
-                <div>
-                    <img src="images/clock13-13.svg" alt="Иконка часов" width="13" height="13">
-                    <p>Время в пути: 40-45 минут</p>
-                    <img src="images/place12-14.svg" alt="Иконка местонахождения" width="12" height="14">
-                    <p>Расстояние: 5 км</p>
-                    <img src="images/star.svg" alt="Иконка звезды" width="12" height="14">
-                    <p>Сложность: легкая</p>
+        <section class="section tour">
+            <h2 class="section__title">Наши маршруты</h2>
+            <div class="tour__content">
+                <h3 class="tour__title">Шаговая прогулка "По марийскому лесу"</h3>
+                <p class="tour__content-price">1000 рублей</p>
+                <div class="tour__details">
+                    <img class="tour__details-icon" src="images/clock.svg" alt="Иконка часов" width="13" height="13">
+                    <p class="tour__details-text">Время в пути: 40-45 минут</p>
+                    <img class="tour__details-icon" src="images/place.svg" alt="Иконка местонахождения" width="12" height="14">
+                    <p class="tour__details-text">Расстояние: 5 км</p>
+                    <img class="tour__details-icon" src="images/star.svg" alt="Иконка звезды" width="12" height="14">
+                    <p class="tour__details-text">Сложность: легкая</p>
                 </div>
-                <p>Прогулка проходит по национальному парку "Марий Чодра" по лесной зоне. 
+                <p class="tour__description">Прогулка проходит по национальному парку "Марий Чодра" по лесной зоне. 
                     Этот маршрут идеально подходит для новичков, чтобы познакомиться с лошадью, получить первичные навыки верховой езды и насладиться природой.
                     Цена указана за 1 человека.</p>
             </div>
-            <img src="images/onetropa5.jpg" alt="Фото с прогулки" width="360" height="360">
-            <div>
-                <h3>Шаговая конная прогулка по лесу "К Царским воротам", 7 км</h3>
-                <p>1500 рублей</p>
-                <div>
-                    <img src="images/clock13-13.svg" alt="Иконка часов" width="13" height="13">
-                    <p>Время в пути: 1 час 30 минут</p>
-                    <img src="images/place12-14.svg" alt="Иконка местонахождения" width="12" height="14">
-                    <p>Расстояние: 7 км</p>
-                    <img src="images/star.svg" alt="Иконка звезды" width="12" height="14">
-                    <p>Сложность: легкаяя</p>
+            <img class="tour__pic" src="images/tour/tour_1.jpg" alt="Фото с прогулки" width="360" height="360">
+
+            <div class="tour__content">
+                <h3 class="tour__title">Шаговая конная прогулка по лесу "К Царским воротам", 7 км</h3>
+                <p class="tour__content-price">1500 рублей</p>
+                <div class="tour__details">
+                    <img class="tour__details-icon" src="images/clock.svg" alt="Иконка часов" width="13" height="13">
+                    <p class="tour__details-text">Время в пути: 1 час 30 минут</p>
+                    <img class="tour__details-icon" src="images/place.svg" alt="Иконка местонахождения" width="12" height="14">
+                    <p class="tour__details-text">Расстояние: 7 км</p>
+                    <img class="tour__details-icon" src="images/star.svg" alt="Иконка звезды" width="12" height="14">
+                    <p class="tour__details-text">Сложность: легкаяя</p>
                 </div>
-                <p>Ключевая точка маршрута - 4 величественные ели, названные местными жителями Царские ворота. 
+                <p class="tour__description">Ключевая точка маршрута - 4 величественные ели, названные местными жителями Царские ворота. 
                     Существует поверьте, что если пройти через Царские ворота и загадать желание, то оно обязательно сбудется. Цена указана за 1 человека.</p>
             </div>
-            <img src="images/twotropa7.jpg" alt="Фото с прогулки" width="360" height="360">
-            <div>
-                <h3>Конная прогулка для опытных всадников, 10 км</h3>
-                <p>1500 рублей</p>
-                <div>
-                    <img src="images/clock13-13.svg" alt="Иконка часов" width="13" height="13">
-                    <p>Время в пути: время прохождения зависит от опыта всадника</p>
-                    <img src="images/place12-14.svg" alt="Иконка местонахождения" width="12" height="14">
-                    <p>Расстояние: 10 км</p>
-                    <img src="images/star.svg" alt="Иконка звезды" width="12" height="14">
-                    <p>Сложность: средняя</p>
+            <img class="tour__pic" src="images/tour/tour_2.jpg" alt="Фото с прогулки" width="360" height="360">
+
+            <div class="tour__content">
+                <h3 class="tour__title">Конная прогулка для опытных всадников, 10 км</h3>
+                <p class="tour__content-price">1500 рублей</p>
+                <div class="tour__details">
+                    <img class="tour__details-icon" src="images/clock.svg" alt="Иконка часов" width="13" height="13">
+                    <p class="tour__details-text">Время в пути: время прохождения зависит от опыта всадника</p>
+                    <img class="tour__details-icon" src="images/place.svg" alt="Иконка местонахождения" width="12" height="14">
+                    <p class="tour__details-text">Расстояние: 10 км</p>
+                    <img class="tour__details-icon" src="images/star.svg" alt="Иконка звезды" width="12" height="14">
+                    <p class="tour__details-text">Сложность: средняя</p>
                 </div>   
-                <p>Прогулка проходит по лесу. Прохождение маршрута шагом, рысью и галопом, зависит от ваших навыков верховой езды. Цена указана за 1 человека.</p>
+                <p class="tour__description">Прогулка проходит по лесу. Прохождение маршрута шагом, рысью и галопом, зависит от ваших навыков верховой езды. Цена указана за 1 человека.</p>
             </div>
-            <img src="images/twotropa.jpg" alt="Фото с прогулки" width="360" height="360">
-            <div>
-                <h3>Конная прогулка для опытных всадников, 15 км</h3>
-                <p>2000 рублей</p>
-                <div>
-                    <img src="images/clock13-13.svg" alt="Иконка часов" width="13" height="13">
-                    <p>Время в пути: время прохождения зависит от опыта всадника</p>
-                    <img src="images/place12-14.svg" alt="Иконка местонахождения" width="12" height="14">
-                    <p>Расстояние: 15 км</p>
-                    <img src="images/star.svg" alt="Иконка звезды" width="12" height="14">
-                    <p>Сложность: сложная</p>
+            <img class="tour__pic" src="images/tour/tour_3.jpg" alt="Фото с прогулки" width="360" height="360">
+
+            <div class="tour__content">
+                <h3 class="tour__title">Конная прогулка для опытных всадников, 15 км</h3>
+                <p class="tour__content-price">2000 рублей</p>
+                <div class="tour__details">
+                    <img class="tour__details-icon" src="images/clock.svg" alt="Иконка часов" width="13" height="13">
+                    <p class="tour__details-text">Время в пути: время прохождения зависит от опыта всадника</p>
+                    <img class="tour__details-icon" src="images/place.svg" alt="Иконка местонахождения" width="12" height="14">
+                    <p class="tour__details-text">Расстояние: 15 км</p>
+                    <img class="tour__details-icon" src="images/star.svg" alt="Иконка звезды" width="12" height="14">
+                    <p class="tour__details-text">Сложность: сложная</p>
                 </div>        
-                <p>Прогулка проходит по лесу. Прохождение маршрута шагом, рысью и галопом, зависит от ваших навыков верховой езды. Цена указана за 1 человека.</p>
+                <p class="tour__description">Прогулка проходит по лесу. Прохождение маршрута шагом, рысью и галопом, зависит от ваших навыков верховой езды. Цена указана за 1 человека.</p>
             </div>
-            <img src="images/threetropa.jpg" alt="Фото с прогулки" width="360" height="360">
-            <div>
-                <h3>Шаговая конная прогулка по экологической тропе "След человека" 15 км</h3>
-                <p>3000 рублей</p>
-                <div>
-                    <img src="images/clock13-13.svg" alt="Иконка часов" width="13" height="13">
-                    <p>Время в пути: около 2,5 часов</p>
-                    <img src="images/place12-14.svg" alt="Иконка местонахождения" width="12" height="14">
-                    <p>Расстояние: 15 км</p>
-                    <img src="images/star.svg" alt="Иконка звезды" width="12" height="14">
-                    <p>Сложность: средняя</p>
+            <img class="tour__pic" src="images/tour/tour_4.jpg" alt="Фото с прогулки" width="360" height="360">
+
+            <div class="tour__content">
+                <h3 class="tour__title">Шаговая конная прогулка по экологической тропе "След человека" 15 км</h3>
+                <p class="tour__content-price">3000 рублей</p>
+                <div class="tour__details">
+                    <img class="tour__details-icon" src="images/clock.svg" alt="Иконка часов" width="13" height="13">
+                    <p class="tour__details-text">Время в пути: около 2,5 часов</p>
+                    <img class="tour__details-icon" src="images/place.svg" alt="Иконка местонахождения" width="12" height="14">
+                    <p class="tour__details-text">Расстояние: 15 км</p>
+                    <img class="tour__details-icon" src="images/star.svg" alt="Иконка звезды" width="12" height="14">
+                    <p class="tour__details-text">Сложность: средняя</p>
                 </div>
-                <p>Ключевые точки маршрута - Царские ворота, каменный карьер, устье реки Юшут, река Илеть. Цена указана за 1 человека.</p>
+                <p class="tour__description">Ключевые точки маршрута - Царские ворота, каменный карьер, устье реки Юшут, река Илеть. Цена указана за 1 человека.</p>
             </div>
-            <img src="images/3000tropa.jpg" alt="Фото с прогулки" width="360" height="360">
+            <img class="tour__pic" src="images/tour/tour_5.jpg" alt="Фото с прогулки" width="360" height="360">
+
         </section>
-        <section  class="gallery">
-            <h2 class="gallery__title">Галерея</h2>
+        <section  class="gallery section">
+            <h2 class="gallery__title section__title">Галерея</h2>
             <div  class="gallery__list">
-                <img class="gallery__item" src="images/trip1.webp" alt="Фото с прогулки" width="120" height="120"> 
-                <img class="gallery__item" src="images/trip2.jpg" alt="Фото с прогулки" width="150" height="120"> 
-                <img class="gallery__item" src="images/trip6.jpg" alt="Фото с прогулки" width="150" height="120">
-                <img class="gallery__item" src="images/trip4.png" alt="Фото с прогулки" width="150" height="120"> 
-                <img class="gallery__item" src="images/trip3.jpg" alt="Фото с прогулки" width="150" height="120">
-                <img class="gallery__item" src="images/trip5.jpg" alt="Фото с прогулки" width="150" height="120">
-                <img class="gallery__item" src="images/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
-                <img class="gallery__item" src="images/trip8.webp" alt="Фото с прогулки" width="160" height="120">
+                <img class="gallery__item" src="images/trip/trip1.webp" alt="Фото с прогулки" width="120" height="120"> 
+                <img class="gallery__item" src="images/trip/trip2.jpg" alt="Фото с прогулки" width="150" height="120"> 
+                <img class="gallery__item" src="images/trip/trip6.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip/trip4.png" alt="Фото с прогулки" width="150" height="120"> 
+                <img class="gallery__item" src="images/trip/trip3.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip/trip5.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
+                <img class="gallery__item" src="images/trip/trip8.webp" alt="Фото с прогулки" width="160" height="120">
             </div>
         </section>
-        <section class="reviews">
-            <h2 class="reviews__title title title--centered">Отзывы</h2>
-            <div class="reviews__swiper swiper">
-                <div>
-                  <h3 class="swiper__title">«Прогулка была воодушевляющая, семья осталась в восторге!»</h3>
-                   <p class="swiper__text">«Решили съездить всей семьей на выходных покататься на лошадях. Долго выбирали куда именно,  
+        <section class="reviews section">
+            <h2 class="reviews__title section__title">Отзывы</h2>
+            <div class="reviews__content">
+                <div class="reviews__details">
+                  <h3 class="reviews__title">«Прогулка была воодушевляющая, семья осталась в восторге!»</h3>
+                   <p class="reviews__text">«Решили съездить всей семьей на выходных покататься на лошадях. Долго выбирали куда именно,  
                                     в итоге решили съездить в конюшню Марий Чодра - и не прогадали! Вежливый персонал,
                                     послушные лошади и красивая природа леса. Обязательно поедем еще)) Уже строим планы, чтобы
-                                    поехать в следующие выходные. Спасибо большое за такую возможность отвлечься от городской суеты )
-                    </p>
-                    <a href="#" class="swiper__link">Читать отзыв полностью</a>
+                                    поехать в следующие выходные. Спасибо большое за такую возможность отвлечься от городской суеты )</p>
+                    <a class="reviews__link" href="#" >Читать отзыв полностью</a>
                 </div>
-                            <div class="swiper__user">
-                                <img src="images/Elizaveta_M.jpg" alt="Аватар комментатора"
-                                    class="swiper__user-avatar" width="380" height="380" loading="lazy">
-                                <p>Елизавета Меньшикова</p>
-                                <p>Йошкар-Ола</p>
-                            </div>
+                <div class="reviews__user">
+                    <img class="reviews__user-avatar" src="images/Elizaveta_M.jpg" alt="Аватар комментатора" width="380" height="380" loading="lazy">
+                    <p class="reviews__user-name">Елизавета Меньшикова</p>
+                    <p class="reviews__user-location">Йошкар-Ола</p>
+                </div>
             </div>
-            <div class="reviews__swiper swiper">   
-                <div>
-                    <h3 class="swiper__title">«Лучший досуг за последнее время!»</h3>
-                    <p class="swiper__text">«Съездили покататься на лошадях вместе с молодым человеком на самую длительную прогулку.
+            <div class="reviews__content">   
+                <div class="reviews__details">
+                    <h3 class="reviews__title">«Лучший досуг за последнее время!»</h3>
+                    <p class="reviews__text">«Съездили покататься на лошадях вместе с молодым человеком на самую длительную прогулку.
                                     Сначала сомневались, что для первого раза наверное лучше взять самую короткую дистанцию. 
                                     Но в итоге все прошло замечательно. Это лучшее времяпрепровождение за последнее время. 
                                     Очень понравились инструкторы, они очень доносчиво доносили до нас информацию и обучали верховой езде. 
                                     С ними нам было очень комфротно и вовсе не страшно. Хочу отметить красоту осеннего леса, мы попали в разгар золотой осени и это было незабываемо!
                                     Молодому человеку тоже все очень понравилось, хотя он не любитель активного отдыха.
                                     Всем искренне советуем съездить в Марий Чодра на конные прогулки!</p>
-                     <a href="#" class="swiper__link">Читать отзыв полностью</a>
+                     <a class="reviews__link" href="#" >Читать отзыв полностью</a>
                 </div>
-                            <div class="swiper__user">
-                                <img src="images/Irina_Lebedeva.jpg" alt="Аватар комментатора"
-                                    class="swiper__user-avatar" width="380" height="380" loading="lazy">
-                                <p>Ирина Лебедева</p>
-                                <p>Козмодемьянск</p>
-                            </div>
+                <div class="reviews__user">
+                    <img class="reviews__user-avatar" src="images/Irina_Lebedeva.jpg" alt="Аватар комментатора" width="380" height="380" loading="lazy">
+                    <p class="reviews__user-name">Ирина Лебедева</p>
+                    <p class="reviews__user-location">Козмодемьянск</p>
+                </div>
             </div>
         </section>
-        <div class="dialog">
-            <section class="popup">
-                <button class="popur_close" type="button">
-                    <img src="images/profile.png" alt="профиль" width="50" height="50">
-                </button>
-                <h2 class="popur_title">Войдите в профиль</h2>
-                <p class="popup_desc">Забронировать тур могут только зарегестрированные пользователи</p>
-                <div class="popup_buttons">
-                    <button class="button button--accent" type="button">Войти</button>
-                    <button class="button" type="button">Регистрация</button>
+форма в отзывы
+        <section class="section booking">
+            <h2 class="booking__title">Бронирование онлайн</h2>
+            <form class="form booking__form" action="#" method="post">
+                <label class="form__desc" for="date">Желаемая дата</label>
+                 <input class="form__field" type="date" name="date" id="date" required>
+
+                <label class="form__desc" for="phone">Телефон или WhatsApp</label>
+                <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
+                <input class="form__field" type="tel" name="phone" id="phone" required>
+
+                <!--https://snipp.ru/php/input-number-jquery Для стилизации в CSS-->
+                <label class="form__desc" for="number">Количество человек</label>
+                <div class="form__field" data-step="1" data-min="1" data-max="100">
+                    <a href="#" class="form__desc-minus">−</a>
+                    <input class="form__desc" type="text" name="count" value="1" id="number" required>
+                    <a href="#" class="form__desc-plus">+</a>
                 </div>
-            </section>
-            <section class="section popup">
-                <button class="popup_close" type="button">
-                    <img src="images/pen.png" alt="Закрыть окно" width="50" height="50">
-                </button>
-                <h2 class="popup_title">Войти</h2>
-                <form class="popup_form form" action="#" method="post">
-                    <input class="form_field" type="email" name="email" placeholder="Логин" required>
-                    <input class="form_field" type="password" name="password" placeholder="Пароль" required>
-                    <fieldset class="form_buttons">
-                        <button class="button button--accent" type="submit">Войти</button>
-                        <button class="button" type="button">Отмена</button>
-                    </fieldset>
-                    <button class="button button--link" type="button">У меня ещё нет аккаунта</button>
-                </form>
-            </section>
-        </div>
-        <div class="">
-                <h2 class="">Если появились вопросы, укажите ваш телефон</h2>
-                <div class="">Мы свяжемся с вами в течение 15 минут</div>
-                <form class="" action="#" method="post">
-                    <div class="">
-                        <label class="">
-                            <input type="tel" class="input-reset footer__input-tel" placeholder="Номер телефона"
-                                name="phone" required>
-                        </label>
-                        <button class="footer__button button button-reset" type="submit">Забронировать время</button>
-                    </div>
-                    <label class="">
-                        <input type="checkbox" class="" name="agreement" value="yes"
-                            required>
-                        <span class=""> Нажимая на кнопку, вы соглашаетесь с 
-                            <a href="#" class="">условиями обработки персональных данных</a></span>
-                    </label>
-                </form>
-            </div>
+
+                <label class="form__desc" for="username">Как к вам обращаться?</label>
+                <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
+                <input class="form__field" type="text" name="name" id="username" required>
+
+                <button class="button form__button" type="button">Забронировать</button>
+            </form>
+        </section>
+
+        <section class="popup">
+            <button class="popup_close" type="button">
+                <img class="popup_close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
+            </button>
+            <h2 class="popup_title">Оставить заявку</h2>
+            <form class="popup_form form" action="#" method="post">
+                <label class="form_desc" for="name">Как к вам обращаться?</label>
+                <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
+                <input class="form__field" type="text" name="name" id="name" required>
+
+                <label class="form_desc" for="telephone">Телефон или WhatsApp</label>
+                <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
+                <input class="form__field" type="tel" name="phone" id="telephone" required>
+
+                <button class="button" type="button">Отправить</button>
+            </form>
+         </section>
+        
     </main>
     <footer class="footer container">
-        <div>   
-           <h2>Как с нами связаться</h2>
-           <img src="images/telephone.svg" alt="Контакты" width="25" height="25">
-           <p>+7 (961) 333-89-59</p>
-           <img src="images/email.svg" alt="Контакты" width="30" height="30">
-           <p>e-mail:koniMariyChodra@yandex.ru</p>
-           <img src="images/vk.png" alt="Контакты" width="30" height="30">
-           <p>vk.com/konimariychodra</p>
-           <img src="images/tg.png" alt="Контакты" width="30" height="30">
-           <p>t.me/koni_MariyChodra</p>
-           <img src="images/home.svg" alt="Контакты" width="30" height="30">
-           <p>Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p>
+        <h2 class="footer_title">Как с нами связаться</h2>
+        <div class="footer_contacts">    
+           <img class="footer_icon" src="images/telephone.svg" alt="Иконка телефон" width="25" height="25">
+           <p class="footer_text">+7 (961) 333-89-59</p>
+           <img class="footer_icon" src="images/email.svg" alt="Иконка электронная почта" width="30" height="30">
+           <p class="footer_text">e-mail:koniMariyChodra@yandex.ru</p>
+           <img class="footer_icon" src="images/vk.png" alt="Иконка вконтакте" width="30" height="30">
+           <p class="footer_text">vk.com/konimariychodra</p>
+           <img class="footer_icon" src="images/tg.png" alt="Иконка телеграмм" width="30" height="30">
+           <p class="footer_text">t.me/koni_MariyChodra</p>
+           <img class="footer_icon" src="images/home.svg" alt="Иконка адрес" width="30" height="30">
+           <p class="footer_text">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p>
         </div>      
-        <section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="section iframe">
+            <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <a class="footer_logo">Koni</a>
-        <nav>
-            <ul>
-                <li><a href="#">Маршруты</a></li>
-                <li><a href="#">Галерея</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><button type="button">Бронирование</button></li>
+        <nav class="footer-nav">
+            <ul class="footer-list">
+                <li class="footer_item"><a class="footer_item-link" href="#">Маршруты</a></li>
+                <li class="footer_item"><a class="footer_item-link" href="#">Галерея</a></li>
+                <li class="footer_item"><a class="footer_item-link" href="#">Отзывы</a></li>
+                <li class="footer_item"><button class="footer_item-button button" type="button">Бронирование</button></li>
             </ul>
         </nav>  
-        <p class="footer_copy">©Koni 2024</p>
+        <p class="footer_copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
     </footer>
 </body>
 </html>
