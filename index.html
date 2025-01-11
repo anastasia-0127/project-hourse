@@ -185,7 +185,26 @@
                 </div>
             </div>
         </section>
-форма в отзывы
+
+        <section class="feedback section">
+            <button class="feedback__close" type="button">
+                <img class="feedback_close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
+            </button>
+            <h2 class="feedback_title">Оставить отзыв</h2>
+            <form class="feedback_form form" action="#" method="post">
+                <label class="form__desc" for="username">Как к вам обращаться?</label>
+                <input class="form__field" type="text" name="name" id="username" required>
+
+                <label class="form__desc" for="city">Из какого вы города?</label>
+                <input class="form__field" type="text" name="city" id="city" required>
+
+                <label class="form__desc" for="impression">Ваши впечатления после поездки</label>
+                <input class="form__field" type="text" name="impression" id="impression" required>
+
+            <button class="button" type="button">Отправить</button>
+            </form>
+        </section>
+
         <section class="section booking">
             <h2 class="booking__title">Бронирование онлайн</h2>
             <form class="form booking__form" action="#" method="post">
@@ -213,51 +232,51 @@
         </section>
 
         <section class="popup">
-            <button class="popup_close" type="button">
-                <img class="popup_close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
+            <button class="popup__close" type="button">
+                <img class="popup__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
             </button>
-            <h2 class="popup_title">Оставить заявку</h2>
-            <form class="popup_form form" action="#" method="post">
-                <label class="form_desc" for="name">Как к вам обращаться?</label>
+            <h2 class="popup__title">Оставить заявку</h2>
+            <form class="popup__form form" action="#" method="post">
+                <label class="form__desc" for="name">Как к вам обращаться?</label>
                 <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
                 <input class="form__field" type="text" name="name" id="name" required>
 
-                <label class="form_desc" for="telephone">Телефон или WhatsApp</label>
+                <label class="form__desc" for="telephone">Телефон или WhatsApp</label>
                 <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
                 <input class="form__field" type="tel" name="phone" id="telephone" required>
 
                 <button class="button" type="button">Отправить</button>
             </form>
          </section>
-        
+
     </main>
     <footer class="footer container">
-        <h2 class="footer_title">Как с нами связаться</h2>
-        <div class="footer_contacts">    
-           <img class="footer_icon" src="images/telephone.svg" alt="Иконка телефон" width="25" height="25">
-           <p class="footer_text">+7 (961) 333-89-59</p>
-           <img class="footer_icon" src="images/email.svg" alt="Иконка электронная почта" width="30" height="30">
-           <p class="footer_text">e-mail:koniMariyChodra@yandex.ru</p>
-           <img class="footer_icon" src="images/vk.png" alt="Иконка вконтакте" width="30" height="30">
-           <p class="footer_text">vk.com/konimariychodra</p>
-           <img class="footer_icon" src="images/tg.png" alt="Иконка телеграмм" width="30" height="30">
-           <p class="footer_text">t.me/koni_MariyChodra</p>
-           <img class="footer_icon" src="images/home.svg" alt="Иконка адрес" width="30" height="30">
-           <p class="footer_text">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p>
+        <h2 class="footer__title">Как с нами связаться</h2>
+        <div class="footer__contacts">    
+           <img class="footer__icon" src="images/telephone.svg" alt="Иконка телефон" width="25" height="25">
+           <p class="footer__text">+7 (961) 333-89-59</p>
+           <img class="footer__icon" src="images/email.svg" alt="Иконка электронная почта" width="30" height="30">
+           <p class="footer__text">e-mail:koniMariyChodra@yandex.ru</p>
+           <img class="footer__icon" src="images/vk.png" alt="Иконка вконтакте" width="30" height="30">
+           <p class="footer__text">vk.com/konimariychodra</p>
+           <img class="footer__icon" src="images/tg.png" alt="Иконка телеграмм" width="30" height="30">
+           <p class="footer__text">t.me/koni_MariyChodra</p>
+           <img class="footer__icon" src="images/home.svg" alt="Иконка адрес" width="30" height="30">
+           <p class="footer__text">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p>
         </div>      
         <section class="section iframe">
             <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-        <a class="footer_logo">Koni</a>
+        <a class="footer__logo">Koni</a>
         <nav class="footer-nav">
             <ul class="footer-list">
-                <li class="footer_item"><a class="footer_item-link" href="#">Маршруты</a></li>
-                <li class="footer_item"><a class="footer_item-link" href="#">Галерея</a></li>
-                <li class="footer_item"><a class="footer_item-link" href="#">Отзывы</a></li>
-                <li class="footer_item"><button class="footer_item-button button" type="button">Бронирование</button></li>
+                <li class="footer__item"><a class="footer_item-link" href="#">Маршруты</a></li>
+                <li class="footer__item"><a class="footer_item-link" href="#">Галерея</a></li>
+                <li class="footer__item"><a class="footer_item-link" href="#">Отзывы</a></li>
+                <li class="footer__item"><button class="footer_item-button button" type="button">Бронирование</button></li>
             </ul>
         </nav>  
-        <p class="footer_copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
+        <p class="footer__copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
     </footer>
 </body>
 </html>
