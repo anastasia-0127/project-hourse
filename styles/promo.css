@@ -1,0 +1,44 @@
+.promo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.promo__title {
+    text-align: left;
+}
+
+.promo__content {
+    max-width: 688px;
+    margin-top: 211px;
+    margin-bottom: 239px;
+    color: rgb(240, 248, 255);
+
+    z-index: 1;
+
+    text-align: left;
+    width: 700px;
+    line-height: 1.5;
+
+    padding: 10px 20px;
+}
+
+.promo__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border-bottom-left-radius: 200px;
+}
+
+.promo__button-text {
+    background: url("../images/arrow1.svg") no-repeat right / contain; 
+    border: none;
+    padding: 10px 60px 10px 10px ;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    margin-right: 10px;
+}
+

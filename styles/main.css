@@ -2,3 +2,13 @@
 .booking {
     background-color: #F4F4F4;
 }
+
+.promo-wrap {
+    background-size: cover;
+    background-image: linear-gradient(180deg,rgba(105, 102, 102, 0.514),rgba(117, 111, 111, 0.452)),url("../images/fon_img.jpg");
+    background-color: #F4F4F4;
+}
+
+.section__title {
+    text-align: center;
+}

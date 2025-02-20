@@ -1,0 +1,32 @@
+.advantages__item {
+    width: 350px;
+    padding: 15px;
+    background-color: rgba(2, 156, 148, 0);
+   color: black;
+    box-shadow: 1px 2px 20px 5px #d7d7d700;
+}
+
+.advantages__icon {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    object-fit: cover;
+}
+
+.advantages__description {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.advantages__list {
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+}

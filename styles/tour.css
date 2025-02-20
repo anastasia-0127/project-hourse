@@ -1,0 +1,67 @@
+.tour {
+    padding: 10px 20px;
+}
+
+.tour__content-price {
+    font-weight: bold;
+    margin-block-start: 0;
+}
+
+.tour__title {
+    margin-block-end: 0;
+}
+
+.tour__details-time {
+    padding-left: 30px;
+    background-image: url("../images/clock.svg");
+    background-position: left center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.tour__details-place {
+    padding-left: 30px;
+    background-image: url("../images/place.svg");
+    background-position: left center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.tour__details-level {
+    padding-left: 30px;
+    background-image: url("../images/star.svg");
+    background-position: left center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.tour__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour__wrap-left {
+    gap: 10px;
+    width: 60%;
+    padding: 10px;
+}
+
+.tour__wrap-right {
+    width: 370px;
+    flex-shrink: 0;
+    padding: 15px;
+    object-fit: none;
+    object-position: 50% 50%
+}
+
+.tour_pic {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: 50% 50%
+}
+
+.line {
+    width: 50%;
+    color:#02606a
+}

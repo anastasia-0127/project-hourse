@@ -10,3 +10,10 @@
 @import "footer.css";
 /* Подключение стилей относящихся к main*/
 @import "main.css";
+
+@import "advantages.css";
+@import "gallery.css";
+@import "media.css";
+@import "promo.css";
+@import "reviews.css";
+@import "tour.css";
