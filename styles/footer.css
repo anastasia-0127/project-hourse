@@ -9,9 +9,7 @@
 .footer__wrap-right {
     width: 500px;
     flex-shrink: 0;
-    margin-top: auto;
-    margin-right: auto;
-
+    margin-right: 200px;
 }
 
 .footer__wrap-left {
@@ -52,4 +50,38 @@
     display: block;
     padding: 10px;
     margin: 5px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    height: 200px;
+}
+
+.footer__text-phone {
+    padding-left: 50px;
+    background-image: url("../images/telephone.svg");
+    background-position: left center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    line-height: 40px;
+}
+
+.footer__text-mail {
+    padding-left: 50px;
+    background-image: url("../images/email.svg");
+    background-position: left center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    line-height: 40px;
+}
+
+.footer__text-place {
+    padding-left: 50px;
+    background-image: url("../images/home.svg");
+    background-position: top left;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    line-height: 40px;
 }

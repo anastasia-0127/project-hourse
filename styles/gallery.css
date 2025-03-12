@@ -1,22 +1,21 @@
 .gallery__item {
-    height: 300px;
-    width: 300px;
-    flex-shrink: 0;
+    min-width: 360px; 
+    transition: 0.3s ease;
 }
 
-.gallery__item:not(:last-child) {
+.tgallery__item:not(:last-child) {
     margin-right: 10px; 
 }
 
-.gallery__item:last-child {
+.tgallery__item:last-child {
     position: relative;
 }
 
-.gallery__item:hover {
+.tgallery__item:hover {
     outline: 3px solid #037E8C;
 }
   
-.gallery__item:last-child::after {
+.tgallery__item:last-child::after {
     position: absolute;
     left: 100%;
     height: 1px;
@@ -26,9 +25,10 @@
 }
 
 .gallery__list {
+    width: 1350px;
     display: flex;
-    padding: 20px;
-    overflow-x: scroll;
-    cursor: pointer;
-    -ms-overflow-style: none;
+    overflow: hidden;
+    margin-top: 60px;
+    gap: 40px;
 }
+

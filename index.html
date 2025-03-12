@@ -14,10 +14,10 @@
             <a class="header__logo logo"><h2 class="header__title">Конные прогулки</h2></a>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a class="header__item-link button" href="tour">Маршруты</a></li>
-                    <li class="header__item"><a class="header__item-link button" href="gallery">Галерея</a></li>
-                    <li class="header__item"><a class="header__item-link button" href="reviews">Отзывы</a></li>
-                    <li class="header__item"><button class="header__item-button button" href="booking" type="button">Бронирование</button></li>
+                    <li class="header__item"><a class="header__item-link button" href="#tour">Маршруты</a></li>
+                    <li class="header__item"><a class="header__item-link button" href="#gallery">Галерея</a></li>
+                    <li class="header__item"><a class="header__item-link button" href="#reviews">Отзывы</a></li>
+                    <li class="header__item"><button class="header__item-button button" href="#booking" type="button">Бронирование</button></li>
                 <li class="header__item">
                     <img class="header__icon" src="images/phone.svg" alt="Иконка телефона" width="17" height="17">
                     <span class="header__contact" >+7 (961) 333-89-59</span>
@@ -153,6 +153,14 @@
                 <img class="gallery__item" src="images/trip/trip7.jpg" alt="Фото с прогулки" width="150" height="120">
                 <img class="gallery__item" src="images/trip/trip8.webp" alt="Фото с прогулки" width="160" height="120">
             </div>
+            <div class="gallery__button">
+                <button class="gallery__left">
+                    <img src="images/arrow1_rotated.svg" alt="Стрелка влево" class="gallery__left-swiper">
+                </button>
+                <button class="gallery__right">
+                    <img src="images/arrow1.svg" alt="Стрелка вправо" class="gallery__right-swiper">
+                </button>
+            </div>
         </section>
         <section class="reviews section" id="reviews">
             <h2 class="reviews__title section__title">Отзывы</h2>
@@ -265,25 +273,24 @@
         <section class="footer">
             <div class="footer__wrap">
                 <div class="footer__wrap-left">
-                <h2 class="footer__title">Как с нами связаться</h2>
+                <h2 class="footer__title">Контакты</h2>
                     <div class="footer__contacts">    
-                        <img class="footer__icon" src="images/telephone.svg" alt="Иконка телефон" width="25" height="25">
-                        <p class="footer__text">+7 (961) 333-89-59</p>
-                        <img class="footer__icon" src="images/email.svg" alt="Иконка электронная почта" width="30" height="30">
-                        <p class="footer__text">e-mail:koniMariyChodra@yandex.ru</p>
+                        <p class="footer__text-phone">+7 (961) 333-89-59</p>
+                        <p class="footer__text-mail">koniMariyChodra@yandex.ru</p>
+                        <p class="footer__text-place">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p></div>
+                    <div class="footer__contacts-sn">   
+                        <h3 class="footer__title">Написать нам:</h2>
                         <img class="footer__icon" src="images/vk.png" alt="Иконка вконтакте" width="30" height="30">
                         <p class="footer__text">vk.com/konimariychodra</p>
                         <img class="footer__icon" src="images/tg.png" alt="Иконка телеграмм" width="30" height="30">
                         <p class="footer__text">t.me/koni_MariyChodra</p>
-                        <img class="footer__icon" src="images/home.svg" alt="Иконка адрес" width="30" height="30">
-                        <p class="footer__text">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p>
                     </div>   
                 </div>   
                 <div class="footer__wrap-right">
                     <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <hr style="border: none; border-top: 2px solid #037E8C;">
+            <hr style="border: none; border-top: 2px solid #121214;">
          </section>
             <div class="footer__container-container">
                 <nav class="footer__nav">
@@ -296,9 +303,11 @@
                       <p class="footer__copy">&copy; Конные прогулки 2025</p>
                      </ul>
                 </nav> 
-                <hr style="border: none; border-top: 2px solid #037E8C;"> 
+                <hr style="border: none; border-top: 2px solid #121214;"> 
             </div>
         <p class="footer__copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
