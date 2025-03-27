@@ -11,6 +11,9 @@
     width: 100%;
 
     transform: translateX(-50%);
+}
+
+.header--scroll {
     background-color: #5b6a6b94;
 }
 

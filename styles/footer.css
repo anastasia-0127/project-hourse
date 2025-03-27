@@ -39,6 +39,7 @@
   
 .footer__item-link {
     text-decoration: none;
+    color: #000000;
 }
 
 .footer_item-button {
@@ -50,6 +51,8 @@
     display: block;
     padding: 10px;
     margin: 5px;
+    text-decoration: none;
+
 }
 
 .footer__contacts {
