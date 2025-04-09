@@ -1,3 +1,8 @@
+.gallery__swiper {
+    display: flex;
+    justify-content: space-between; 
+}
+
 .gallery__item {
     min-width: 300px; 
     min-height: 400px;
@@ -11,16 +16,19 @@
     overflow: hidden;
     margin-top: 60px;
     justify-content: space-around;
+    flex-grow: 2;
 }
 
-.gallery__left {
+.gallery__button-left {
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    background-color: #ffffff;
 }
 
-.gallery__right {
+.gallery__button-right {
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    background-color: #ffffff;
 }

@@ -143,7 +143,11 @@
         </section>
         <section  class="gallery section" id="gallery">
             <h2 class="gallery__title section__title">Галерея</h2>
-            <div  class="gallery__list">
+            <div class="gallery__swiper">
+            <button class="gallery__button-left">
+                <img class="gallery__button-img" src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper" width="130" height="250">
+            </button> 
+            <div class="gallery__list">
                 <img class="gallery__item" src="images/trip/trip1.jpg" alt="Фото с прогулки" width="300" height="400"> 
                 <img class="gallery__item" src="images/trip/trip2.jpg" alt="Фото с прогулки" width="300" height="400"> 
                 <img class="gallery__item" src="images/trip/trip3.jpg" alt="Фото с прогулки" width="300" height="400">
@@ -162,13 +166,10 @@
                 <img class="gallery__item" src="images/trip/trip17.jpg" alt="Фото с прогулки" width="300" height="400">
                 <img class="gallery__item" src="images/trip/trip18.jpg" alt="Фото с прогулки" width="300" height="400">
             </div>
-            <div class="gallery__button">
-                <button class="gallery__left">
-                    <img src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper">
+                <button class="gallery__button-right">
+                    <img class="gallery__button-img" src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper" width="130" height="250">
                 </button>
-                <button class="gallery__right">
-                    <img src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper">
-                </button>
+            </div>
             </div>
         </section>
         <section class="reviews section" id="reviews">
@@ -209,7 +210,7 @@
                 </div>
             </div>
         </section>
-        <div class="feedback__wrap">
+        <div class="feedback__wrap"hidden>
         <section class="feedback section">
                 <h2 class="feedback__title">Оставить отзыв</h2>
                 <form class="form feedback__form" action="#" method="post">
@@ -226,7 +227,7 @@
         </section>
         </div>
 
-    <div class="booking__wrap">
+    <div class="booking__wrap" hidden>
         <section class="section booking" id="booking">
             <button class="booking__close" type="button">
                 <img class="booking__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
@@ -257,7 +258,7 @@
         </section>
         </div>
 
-        <div class="popup__wrap">    
+        <div class="popup__wrap" hidden>    
         <section class="popup">
             <button class="popup__close" type="button">
                 <img class="popup__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
@@ -286,37 +287,60 @@
                     <div class="footer__contacts">    
                         <p class="footer__text-phone">+7 (961) 333-89-59</p>
                         <p class="footer__text-mail">koniMariyChodra@yandex.ru</p>
-                        <p class="footer__text-place">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p></div>
-                    <div class="footer__contacts-sn">   
-                        <h3 class="footer__title">Написать нам:</h2>
+                        <p class="footer__text-place">Мы находимся по адресу:Республика Марий Эл, пгт. Красногорский, ул. Железнодорожная 26Б </p></div> 
+                    <div class="footer__contacts-sn">
+                        <h3 class="footer__title">Написать нам:</h3>
+                        <div class="contacts-sn">
                         <img class="footer__icon" src="images/vk.png" alt="Иконка вконтакте" width="30" height="30">
                         <p class="footer__text">vk.com/konimariychodra</p>
                         <img class="footer__icon" src="images/tg.png" alt="Иконка телеграмм" width="30" height="30">
                         <p class="footer__text">t.me/koni_MariyChodra</p>
-                    </div>   
+                    </div></div>   
                 </div>   
-                <div class="footer__wrap-right">
+                <!--<div class="footer__wrap-right">
                     <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6284.638980053949!2d48.3170633265244!3d56.15787539711412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41597b49991ad7bb%3A0xe9ceb9c3534c29da!2z0JbQtdC70LXQt9C90L7QtNC-0YDQvtC20L3QsNGPINGD0LsuLCAyNtCRLCDQmtGA0LDRgdC90L7Qs9C-0YDRgdC60LjQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MDkw!5e0!3m2!1sru!2sru!4v1732534450365!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>-->
+                <div class="footer__wrap-right" style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/org/konyushnya_fgbu_np_mariy_chodra/3315485834/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Конюшня ФГБУ НП Марий Чодра</a>
+                    <a href="https://yandex.ru/maps/11077/mari-el-republic/category/horse_riding/184107287/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Конный клуб в Республике Марий Эл</a>
+                    <iframe class="iframe-map" src="https://yandex.ru/map-widget/v1/?ll=48.320639%2C56.157793&mode=poi&poi%5Bpoint%5D=48.324219%2C56.159549&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D3315485834&z=15.44" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
                 </div>
             </div>
             <hr style="border: none; border-top: 2px solid #121214;">
          </section>
             <div class="footer__container-container">
                 <nav class="footer__nav">
-                     <ul class="footer__list">
+                    <ul class="footer__list">
                       <a class="footer__logo">Конные прогулки</a>
                       <li class="footer__item"><a href="#tour" class="footer__item-link">Маршруты</a></li>
                       <li class="footer__item"><a href="#gallery" class="footer__item-link">Галерея</a></li>
                       <li class="footer__item"><a href="#reviews" class="footer__item-link">Отзывы</a></li>
-                      <li class="footer__item"><a href="#booking" button class="footer__item-button button" type="button">Бронирование</button></a></li>
-                      <p class="footer__copy">&copy; Конные прогулки 2025</p>
-                     </ul>
+                      <li class="footer__item"><button class="footer__item-button button" href="#booking" type="button">Бронирование</button></li>
+                    </ul>
                 </nav> 
                 <hr style="border: none; border-top: 2px solid #121214;"> 
             </div>
+        <p class="footer__copy">&copy; Конные прогулки 2025</p>
         <p class="footer__copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
     </footer>
-
+        <!-- Scrollup -->
+        <button class="scroll-up" type="button" title="Наверх">
+                <svg width="800px" height="800px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="icomoon-ignore">
+                    </g>
+                    <path d="M26.221 16c0-7.243-5.871-13.113-13.113-13.113s-13.113 5.87-13.113 13.113c0 7.242 5.871 13.113 13.113 13.113s13.113-5.871 13.113-13.113zM1.045 16c0-6.652 5.412-12.064 12.064-12.064s12.064 5.412 12.064 12.064c0 6.652-5.411 12.064-12.064 12.064-6.652 0-12.064-5.412-12.064-12.064z" fill="#000000">
+                    
+                    </path>
+                    <path d="M18.746 15.204l0.742-0.742-6.379-6.379-6.378 6.379 0.742 0.742 5.112-5.112v12.727h1.049v-12.727z" fill="#000000">
+                    
+                    </path>
+                </svg>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.1464 6.85355C11.3417 7.04882 11.6583 7.04882 11.8536 6.85355C12.0488 6.65829 12.0488 6.34171 11.8536 6.14645L7.85355 2.14645C7.65829 1.95118 7.34171 1.95118 7.14645 2.14645L3.14645 6.14645C2.95118 6.34171 2.95118 6.65829 3.14645 6.85355C3.34171 7.04882 3.65829 7.04882 3.85355 6.85355L7.5 3.20711L11.1464 6.85355ZM11.1464 12.8536C11.3417 13.0488 11.6583 13.0488 11.8536 12.8536C12.0488 12.6583 12.0488 12.3417 11.8536 12.1464L7.85355 8.14645C7.65829 7.95118 7.34171 7.95118 7.14645 8.14645L3.14645 12.1464C2.95118 12.3417 2.95118 12.6583 3.14645 12.8536C3.34171 13.0488 3.65829 13.0488 3.85355 12.8536L7.5 9.20711L11.1464 12.8536Z"
+                    fill="#ffffff" />
+            <span class="visually-hidden">Наверх</span>
+        </button>
+        <!--/ Scrollup -->
     <script src="scripts/script.js"></script>
 </body>
 </html>

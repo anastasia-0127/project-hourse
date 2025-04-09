@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentIndex = 0; 
 
 // объявляем переменную prevButton и сохраняем в нее кнопку для перехода к предыдущей группе карточек
-const prevButton = document.querySelector(".gallery__left");
+const prevButton = document.querySelector(".gallery__button-left");
 
 // объявляем переменную nextButton и сохраняем в нее кнопку для перехода к следующей группе карточек
-const nextButton = document.querySelector(".gallery__right");
+const nextButton = document.querySelector(".gallery__button-right");
 
 //объявлем переменную для хранения количества отображаемых карточек
-const visibleCards = 4;
+const visibleCards = 3;
 
 // Вызываем функцию updateSlider() для первоначальной настройки отображения карточек. 
 updateSlider();
@@ -145,3 +145,83 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 });
+
+'use strict'
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*3. Скролинг страницы к верху*/
+
+    const scrollUpButton = document.querySelector('.scroll-up');
+
+    /* Алгоритм
+
+    *  1. Начало.
+    *  2. Проверка условия(навешиваем слушатель событий на scroll страницы и ожидаем ее прокрутку): если страница прокручивается.
+    *   2.1. Да: Получаем все координаты по высоте(создание переменной, которая не будет меняться)
+    *   2.2. Нет: Конец
+    *  3. Проверка условия (Проверяем текущие координаты больше чем видимая часть окна браузера)
+    *   3.1. Да: Добавляем 'scroll-up--show' 
+    *   3.2. Нет: Удаляем 'scroll-up--show'
+    * 4. Проверка условия (навешиваем слушатель событий на кликанье на кнопку скролла): если происходит клик на кнопку скролла.
+    *   4.1. Да: Плавная прокрутка наверх страницы.
+    *   4.2. Нет: Конец
+    *  5. Конец 
+    * 
+    * Блок-схема: /images/Block-schema.scroll.png
+    */
+
+    if (scrollUpButton) {
+        const windowHeight = document.documentElement.clientHeight; // Определяем высоту видимой части окна браузера
+
+        // Показать кнопку при прокрутке вниз на высоту экрана
+        document.addEventListener('scroll', () => {
+            let scrollPageY = this.scrollY;
+
+            if (scrollPageY >= windowHeight) {
+                scrollUpButton.classList.add('scroll-up--show');
+            } else {
+                scrollUpButton.classList.remove('scroll-up--show');
+            }
+        });
+
+        // Плавная прокрутка наверх при нажатии на кнопку
+        scrollUpButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+
+/*document.addEventListener('DOMContentLoaded', () => {*/
+
+    /*4. Появление модальных окон*/
+
+    //Объявляем переменную welcоmeButtonModal и сохраняем в нее кнопку c классом promo__button
+    const welcоmeButtonModal = document.querySelector(".promo__button");
+    
+    //объявляем переменную modalApplication и сохраняем в нее модальное окно, которое хотим увидеть
+    const modalApplication = document.querySelector(".popup__wrap");
+    
+    //Если есть такая кнопка и модальное окно
+    if (welcоmeButtonModal && modalApplication) {
+        console.log('Константа welcоmeButtonModal и modalApplication существует');
+    //Для кнопки «Записаться на курс» добавляем обработчик события клика по этой кнопке:
+        welcоmeButtonModal.addEventListener("click", () => {
+    // удаляем атрибут hidden у модального окна modalApplication и модальное окно становится видимым
+          modalApplication.removeAttribute("hidden");
+        });
+    
+    // добавляем обработчик события при клике вне области формы. Тогда каждый раз, когда пользователь кликает где-либо на фоне вокруг появившейся формы, будет вызываться функция,
+    window.addEventListener("click", (event) => {
+    // проверяем, был ли клик на фоне модального окна
+        if (event.target === modalApplication) {
+    //если условие выполняется, добавляем атрибут hidden у модального окна modalApplication и модальное окно становится невидимым
+            modalApplication.setAttribute("hidden", true)
+        }
+    });
+    }
+/*});*/
