@@ -1,0 +1,24 @@
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .reviews__wrap {
+        max-width: 100%;    
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .scroll-up {
+        right: 40px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .popup {
+        margin-top: 100px;
+
+    }
+}
