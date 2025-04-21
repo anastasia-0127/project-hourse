@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('Скрипт отработал корректно')
 });
 
-
-'use strict'
-
 document.addEventListener("DOMContentLoaded", () => {
 
     /* 1. Ручная прокрутка элементов Галереи с помощью стрелок*/
@@ -42,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentIndex = 0; 
 
 // объявляем переменную prevButton и сохраняем в нее кнопку для перехода к предыдущей группе карточек
-const prevButton = document.querySelector(".gallery__button-left");
+const prevButton = document.querySelector(".gallery__button-left-img");
 
 // объявляем переменную nextButton и сохраняем в нее кнопку для перехода к следующей группе карточек
-const nextButton = document.querySelector(".gallery__button-right");
+const nextButton = document.querySelector(".gallery__button-right-img");
 
 //объявлем переменную для хранения количества отображаемых карточек
 const visibleCards = 3;
@@ -100,9 +97,6 @@ function updateSlider() {
     }
 });
 
-
-'use strict'
-
 document.addEventListener('DOMContentLoaded', () => {
 
     /* 2. Исключение накладывания контента на хедер при скроле/прокрутке страницы */
@@ -145,8 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 });
-
-'use strict'
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -195,8 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-/*document.addEventListener('DOMContentLoaded', () => {*/
+document.addEventListener('DOMContentLoaded', () => {
 
     /*4. Появление модальных окон*/
 
@@ -224,4 +215,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     }
-/*});*/
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /*5. Формирование массива из частей определенных элементов блока и вывод их с помощью скрипта*/
+
+    //Объявляем переменную ReviewsContainer и сохраняем в нее элементы reviews
+    const ReviewsContainer = document.querySelector(".reviews");
+
+    //проверяем существует ли элемент ReviewsContainer, если он существует
+    if (ReviewsContainer) {
+
+    //то создаем массив dataTitleReviews, который содержит строки с именами авторов отзывов.
+        const dataTitleReviews = [
+            "Елизавета Меньшикова",
+            "Ирина Лебедева",
+        ];
+
+    //Объявляем переменную titleReviews и сохраняем в нее все элементы на странице с классом reviews__user-name.
+        const titleReviews =
+            ReviewsContainer.querySelectorAll(".reviews__user-name");
+
+    //Проходим по каждому элементу массива titleReviews с помощью цикла forEach. Внутри функции 2 переменные: item – текущий заголовок, а index — его индекс в массиве.
+        titleReviews.forEach((item, index) => {
+
+    //здесь обновляем значение текущего заголовка (textContent) на новое значение из массива dataTitleReviews, используя индекс текущего заголовка.
+            item.textContent = dataTitleReviews[index];
+            });
+    }
+});

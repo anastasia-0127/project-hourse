@@ -24,6 +24,7 @@
     margin-top: 20px;
     cursor: pointer;
     background-color: #ffffff;
+    height: auto;
 }
 
 .gallery__button-right {
@@ -31,4 +32,5 @@
     margin-top: 20px;
     cursor: pointer;
     background-color: #ffffff;
+    height: auto;
 }

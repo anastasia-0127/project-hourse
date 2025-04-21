@@ -145,7 +145,7 @@
             <h2 class="gallery__title section__title">Галерея</h2>
             <div class="gallery__swiper">
             <button class="gallery__button-left">
-                <img class="gallery__button-img" src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper" width="130" height="250">
+                <img class="gallery__button-left-img" src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper" width="130" height="250">
             </button> 
             <div class="gallery__list">
                 <img class="gallery__item" src="images/trip/trip1.jpg" alt="Фото с прогулки" width="300" height="400"> 
@@ -167,7 +167,7 @@
                 <img class="gallery__item" src="images/trip/trip18.jpg" alt="Фото с прогулки" width="300" height="400">
             </div>
                 <button class="gallery__button-right">
-                    <img class="gallery__button-img" src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper" width="130" height="250">
+                    <img class="gallery__button-right-img" src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper" width="130" height="250">
                 </button>
             </div>
             </div>
@@ -186,7 +186,7 @@
             </div>
             <div class="reviews__wrap-left">
                     <img class="reviews__user-avatar" src="images/Elizaveta_M.jpg" alt="Аватар комментатора" width="380" height="380" loading="lazy">
-                    <p class="reviews__user-name">Елизавета Меньшикова</p>
+                    <p class="reviews__user-name">Отзыв 1</p>
                     <p class="reviews__user-location">Йошкар-Ола</p>
                 </div>
             </div>
@@ -205,12 +205,12 @@
             </div>
             <div class="reviews__wrap-left">
                     <img class="reviews__user-avatar" src="images/Irina_Lebedeva.jpg" alt="Аватар комментатора" width="380" height="380" loading="lazy">
-                    <p class="reviews__user-name">Ирина Лебедева</p>
+                    <p class="reviews__user-name">Отзыв 2</p>
                     <p class="reviews__user-location">Козьмодемьянск</p>
                 </div>
             </div>
         </section>
-        <div class="feedback__wrap"hidden>
+        <div class="feedback__wrap">
         <section class="feedback section">
                 <h2 class="feedback__title">Оставить отзыв</h2>
                 <form class="form feedback__form" action="#" method="post">
@@ -241,13 +241,8 @@
                 <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
                 <input class="form__field" type="tel" name="phone" id="phone" required>
 
-                <!--https://snipp.ru/php/input-number-jquery Для стилизации в CSS-->
                 <label class="form__desc" for="number">Количество человек</label>
-                <div class="form__field-number" data-step="1" data-min="1" data-max="100">
-                    <a href="#" class="form__desc-minus">−</a>
-                    <input class="form__desc-number" type="text" name="count" value="1" id="number" required>
-                    <a href="#" class="form__desc-plus">+</a>
-                </div>
+                <input class="form__field" type="text" name="count" value="1" id="number" required>
 
                 <label class="form__desc" for="username">Как к вам обращаться?</label>
                 <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
@@ -256,26 +251,6 @@
                 <button class="button form__button" type="button">Забронировать</button>
             </form>
         </section>
-        </div>
-
-        <div class="popup__wrap" hidden>    
-        <section class="popup">
-            <button class="popup__close" type="button">
-                <img class="popup__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
-            </button>
-            <h2 class="popup__title">Оставить заявку</h2>
-            <form class="popup__form form" action="#" method="post">
-                <label class="form__desc" for="name">Как к вам обращаться?</label>
-                <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
-                <input class="form__field" type="text" name="name" id="name" required>
-
-                <label class="form__desc" for="telephone">Телефон или WhatsApp</label>
-                <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
-                <input class="form__field" type="tel" name="phone" id="telephone" required>
-
-                <button class="button" type="button">Отправить</button>
-            </form>
-         </section>
         </div>
     </main>
     <footer class="footer container">
@@ -323,9 +298,30 @@
         <p class="footer__copy">&copy; Конные прогулки 2025</p>
         <p class="footer__copy">Царегородцева Анастасия Сергеевна, Сомова Валерия Андреевна, Иванова Анна Ивановна</p>
     </footer>
+    <!-- Формы -->
+        <div class="popup__wrap" hidden>    
+        <section class="popup">
+            <button class="popup__close" type="button">
+                <img class="popup__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
+            </button>
+            <h2 class="popup__title">Оставить заявку</h2>
+            <form class="popup__form form" action="#" method="post">
+                <label class="form__desc" for="name">Как к вам обращаться?</label>
+                <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
+                <input class="form__field" type="text" name="name" id="name" required>
+
+                <label class="form__desc" for="telephone">Телефон или WhatsApp</label>
+                <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
+                <input class="form__field" type="tel" name="phone" id="telephone" required>
+
+                <button class="button button-popup" type="button">Отправить</button>
+            </form>
+        </section>
+        </div>
+        <!--/ Формы -->
         <!-- Scrollup -->
         <button class="scroll-up" type="button" title="Наверх">
-                <svg width="800px" height="800px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="icomoon-ignore">
                     </g>
                     <path d="M26.221 16c0-7.243-5.871-13.113-13.113-13.113s-13.113 5.87-13.113 13.113c0 7.242 5.871 13.113 13.113 13.113s13.113-5.871 13.113-13.113zM1.045 16c0-6.652 5.412-12.064 12.064-12.064s12.064 5.412 12.064 12.064c0 6.652-5.411 12.064-12.064 12.064-6.652 0-12.064-5.412-12.064-12.064z" fill="#000000">
