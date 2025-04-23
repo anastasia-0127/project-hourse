@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot1"></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span>
+        </div>
+     <!----   Загрузка... -->
+    </div>
+
+    <div class="content">
     <main class="main container">
         <div class="promo-wrap">
         <header class="header container">
@@ -38,7 +48,7 @@
             <div class="advantages__content">
                 <h2 class="section__title">Почему выбирают именно нас?</h2>
                 <ul class="advantages__list">
-                    <li class="advantages__item">
+                    <!--<li class="advantages__item">
                         <img class="advantages__icon" src="images/level.svg" alt="Иконка шлема" width="45" height="45">
                         <h3 class="advantages__title">Увлекательные экскурсии</h3>
                         <p class="advantages__description">У нас имеются маршруты разной сложности, как для новичков, так и для всадников, которые уверенно держатся в седле. </p>
@@ -52,7 +62,7 @@
                         <img class="advantages__icon" src="images/tree.svg" alt="Иконка дерева" width="45" height="45">
                         <h3 class="advantages__title">Живописные пейзажи</h3>
                         <p class="advantages__description">Маршруты проходят по лесной зоне: вы познакомитесь с природой парка, посетите различные исторические и природные объекты.</p>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </section>
@@ -147,7 +157,7 @@
             <button class="gallery__button-left">
                 <img class="gallery__button-left-img" src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper" width="130" height="250">
             </button> 
-            <div class="gallery__list">
+                <div class="gallery__list">
                 <img class="gallery__item" src="images/trip/trip1.jpg" alt="Фото с прогулки" width="300" height="400"> 
                 <img class="gallery__item" src="images/trip/trip2.jpg" alt="Фото с прогулки" width="300" height="400"> 
                 <img class="gallery__item" src="images/trip/trip3.jpg" alt="Фото с прогулки" width="300" height="400">
@@ -165,11 +175,10 @@
                 <img class="gallery__item" src="images/trip/trip16.jpg" alt="Фото с прогулки" width="300" height="400">
                 <img class="gallery__item" src="images/trip/trip17.jpg" alt="Фото с прогулки" width="300" height="400">
                 <img class="gallery__item" src="images/trip/trip18.jpg" alt="Фото с прогулки" width="300" height="400">
-            </div>
+                </div>
                 <button class="gallery__button-right">
                     <img class="gallery__button-right-img" src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper" width="130" height="250">
                 </button>
-            </div>
             </div>
         </section>
         <section class="reviews section" id="reviews">
@@ -223,33 +232,7 @@
                     <label class="form__desc" for="impression">Ваши впечатления после поездки</label>
                     <input class="form__field" type="text" name="impression" id="impression" required>
     
-                <button class="button" type="button">Отправить</button></form>
-        </section>
-        </div>
-
-    <div class="booking__wrap" hidden>
-        <section class="section booking" id="booking">
-            <button class="booking__close" type="button">
-                <img class="booking__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
-            </button>
-            <h2 class="booking__title">Бронирование онлайн</h2>
-            <form class="form booking__form" action="#" method="post">
-                <label class="form__desc" for="date">Желаемая дата</label>
-                 <input class="form__field" type="date" name="date" id="date" required>
-
-                <label class="form__desc" for="phone">Телефон или WhatsApp</label>
-                <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
-                <input class="form__field" type="tel" name="phone" id="phone" required>
-
-                <label class="form__desc" for="number">Количество человек</label>
-                <input class="form__field" type="text" name="count" value="1" id="number" required>
-
-                <label class="form__desc" for="username">Как к вам обращаться?</label>
-                <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
-                <input class="form__field" type="text" name="name" id="username" required>
-
-                <button class="button form__button" type="button">Забронировать</button>
-            </form>
+                <button class="form__button button" type="button">Отправить</button></form>
         </section>
         </div>
     </main>
@@ -318,6 +301,31 @@
             </form>
         </section>
         </div>
+        <div class="booking__wrap" hidden>
+            <section class="section booking" id="booking">
+                <button class="booking__close" type="button">
+                    <img class="booking__close-icon" src="images/close.svg" alt="Закрыть окно" width="32" height="32">
+                </button>
+                <h2 class="booking__title">Бронирование онлайн</h2>
+                <form class="form booking__form" action="#" method="post">
+                    <label class="form__desc" for="date">Желаемая дата</label>
+                    <input class="form__field" type="date" name="date" id="date" required>
+    
+                    <label class="form__desc" for="phone">Телефон или WhatsApp</label>
+                    <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
+                    <input class="form__field" type="tel" name="phone" id="phone" required>
+    
+                    <label class="form__desc" for="number">Количество человек</label>
+                    <input class="form__field" type="text" name="count" value="1" id="number" required>
+    
+                    <label class="form__desc" for="username">Как к вам обращаться?</label>
+                    <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
+                    <input class="form__field" type="text" name="name" id="username" required>
+    
+                    <button class="button form__button" type="button">Забронировать</button>
+                </form>
+            </section>
+        </div>
         <!--/ Формы -->
         <!-- Scrollup -->
         <button class="scroll-up" type="button" title="Наверх">
@@ -337,6 +345,7 @@
             <span class="visually-hidden">Наверх</span>
         </button>
         <!--/ Scrollup -->
+    </div>
     <script src="scripts/script.js"></script>
 </body>
 </html>

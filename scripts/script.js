@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /*4. Появление модальных окон*/
+    /*4. Появление модального окна Оставить заявку*/
 
     //Объявляем переменную welcоmeButtonModal и сохраняем в нее кнопку c классом promo__button
     const welcоmeButtonModal = document.querySelector(".promo__button");
@@ -228,10 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ReviewsContainer) {
 
     //то создаем массив dataTitleReviews, который содержит строки с именами авторов отзывов.
-        const dataTitleReviews = [
-            "Елизавета Меньшикова",
-            "Ирина Лебедева",
-        ];
+        const dataTitleReviews = ["Елизавета Меньшикова","Ирина Лебедева",];
 
     //Объявляем переменную titleReviews и сохраняем в нее все элементы на странице с классом reviews__user-name.
         const titleReviews =
@@ -245,3 +242,177 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /*6. Появление модального окна Бронирование через кнопку в header и footer*/
+
+    //Объявляем переменную headerButtonModal и сохраняем в нее кнопку c классом header__item-button
+    const headerButtonModal = document.querySelector(".header__item-button");
+
+    //Объявляем переменную footerButtonModal и сохраняем в нее кнопку c классом footer__item-button
+    const footerButtonModal = document.querySelector(".footer__item-button");
+    
+    //объявляем переменную modalBooking и сохраняем в нее модальное окно, которое хотим увидеть
+    const modalBooking = document.querySelector(".booking__wrap");
+    
+    //Если есть такая кнопка c классом header__item-button и модальное окно
+    if (headerButtonModal && modalBooking) {
+        console.log('Константа headerButtonModal и modalBooking существует');
+    //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
+        headerButtonModal.addEventListener("click", () => {
+    // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
+          modalBooking.removeAttribute("hidden");
+        });
+
+    //Если есть такая кнопка c классом footer__item-button и модальное окно
+    if (footerButtonModal && modalBooking) {
+        console.log('Константа footerButtonModal и modalBooking существует');
+    //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
+        footerButtonModal.addEventListener("click", () => {
+    // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
+          modalBooking.removeAttribute("hidden");
+        });
+    
+    // добавляем обработчик события при клике вне области формы. Тогда каждый раз, когда пользователь кликает где-либо на фоне вокруг появившейся формы, будет вызываться функция,
+    window.addEventListener("click", (event) => {
+    // проверяем, был ли клик на фоне модального окна
+        if (event.target === modalBooking) {
+    //если условие выполняется, добавляем атрибут hidden у модального окна modalBooking и модальное окно становится невидимым
+            modalBooking.setAttribute("hidden", true)
+        }
+    });
+    }}
+});
+
+    /*8. Формирование объекта из элементов раздела и вывод блока динамически*/
+
+    //Объявляем переменную cardsAdvantages и сохраняем в нее элемент с классом advantages
+
+    /*Данный код реализован ниже с помощью загрузки данных с сервера
+
+    const cardsAdvantages = document.querySelector('.advantages');
+
+    // Если такой элемент существует
+    if (cardsAdvantages) {
+    //Объявляем переменную advantagesList и сохраняем в нее элемент с классом advantages__list, чтобы мы могли добавить новые элементы
+        const advantagesList = cardsAdvantages.querySelector('.advantages__list');
+
+    //Создаем объект cardsPriceData, которая содержит данные для трех карточки.
+        const cardsAdvantagesData = {
+    // каждая ссылка содержит icon (иконка), iconAlt (описание иконки), iconWidth(ширина иконки), iconHigth (высота иконки), title (преимущество), description (описание).
+        advantages1: {
+            icon: 'images/level.svg',
+            iconAlt: 'Иконка шлема',
+            iconWidth: 45,
+            iconHigth: 45,
+            title:'Увлекательные экскурсии',
+            description:'У нас имеются маршруты разной сложности, как для новичков, так и для всадников, которые уверенно держатся в седле.'
+        },
+        advantages2: {
+            icon: 'images/instructor.svg',
+            iconAlt: 'Иконка инструктора',
+            iconWidth: 45,
+            iconHigth: 45,
+            title:'Опытные инструктора',
+            description:'Инструкторы очень подробно объяснят всадникам, как вести себя с лошадью, как управлять ею, научат ездить на разных аллюрах.'
+        },
+        advantages3: {
+            icon: 'images/tree.svg',
+            iconAlt: 'Иконка дерева',
+            iconWidth: 45,
+            iconHigth: 45,
+            title:'Живописные пейзажи',
+            description:'Маршруты проходят по лесной зоне: вы познакомитесь с природой парка, посетите различные исторические и природные объекты.'
+        }
+    }
+    //Создаем функцию createCard, которая будет добавлять карточку. Внутри функции 6 переменных.
+    const createCard = (icon, iconAlt, iconWidth, iconHigth, title, description) => {
+        // Создаем переменную  card, которая будет содержать HTML-код карточки и вставляем туда 6 переменных
+        const card = `
+        <li class="advantages__item">
+            <img class="advantages__icon" src="${icon}" alt="${iconAlt}" width="${iconWidth}" height="${iconHigth}">
+            <h3 class="advantages__title">${title}</h3>
+            <p class="advantages__description">${description}</p>
+        </li>
+    `;
+        //  Возвращаем значение переменной card
+        return card;
+    }
+    // Создаем цикл for и проходим по всем элементам объекта cardsAdvantagesData.
+    for (const cardKey in cardsAdvantagesData) {
+        //Получаем данные одной карточки из объекта cardsAdvantagesData 
+        const card = cardsAdvantagesData[cardKey];
+        //создаем переменную cardElement и вызываем функцию createLink, куда передаем (то, из чего будет состоять карточка).
+        const cardElement = createCard(card.icon, card.iconAlt, card.iconWidth, card.iconHigth, card.title, card.description);
+        // с помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка advantagesList.
+        advantagesList.insertAdjacentHTML('beforeend', cardElement);
+    }
+    }
+})*/
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* 9. Динамическая галерея изображений, загрузка данных с сервера.*/
+
+    //Объявляем переменную cardsAdvantages и сохраняем в нее элемент с классом advantages
+    const cardsAdvantages = document.querySelector('.advantages');
+
+    // Если такой элемент существует
+    if (cardsAdvantages) {
+    //Объявляем переменную advantagesList и сохраняем в нее элемент с классом advantages__list, чтобы мы могли добавить новые элементы
+        const advantagesList = cardsAdvantages.querySelector('.advantages__list');
+
+    // Пример URL для получения данных с сервера
+    const apiUrl = 'data.json';
+
+    // Функция для создания карточки
+    const createCard = (icon, iconAlt, iconWidth, iconHigth, title, description) => {
+
+        // Создаем переменную  card, которая будет содержать HTML-код карточки и вставляем туда 6 переменных
+        const card = `
+        <li class="advantages__item">
+            <img class="advantages__icon" src="${icon}" alt="${iconAlt}" width="${iconWidth}" height="${iconHigth}">
+            <h3 class="advantages__title">${title}</h3>
+            <p class="advantages__description">${description}</p>
+        </li>
+    `;
+        return card;
+    };
+
+    // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Данные
+                console.log(typeof data); // Тип полученных данных
+
+                data.forEach(item => {
+                    const cardElement = createCard(item.icon, item.iconAlt, item.iconWidth, item.iconHigth, item.title, item.description);
+                    advantagesList.insertAdjacentHTML('beforeend', cardElement);
+                });
+
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
+    }
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+    if (preloader&&content) {
+        setTimeout(() => {
+            // Скрываемпрелоадер
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+    
+            // Показываемконтент
+            content.style.display = "block";
+    
+            // Удаляемэлементиз DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
+    }
+    })

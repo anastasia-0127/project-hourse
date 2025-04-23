@@ -93,6 +93,7 @@
 }
 
 .popup {
+    position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     width: 600px;
@@ -107,12 +108,65 @@
 }
 
 .popup__title {
+    padding-top: 50px;
     margin-left: 120px;
 }
 
 .popup__close {
     background-color: #037E8C;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
 
+/* Booking */
+
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 120px;
+}
+
+.booking {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 650px;
+
+    margin-top: 90px;
+}
+
+.form__button {
+    margin: 10px;
+}
+
+.booking__title {
+    margin-left: 120px;
+}
+
+.booking__close {
+    background-color: #037E8C;
+}
+
+.feedback {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 420px;
+}
+
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
 /* scroll-up */
