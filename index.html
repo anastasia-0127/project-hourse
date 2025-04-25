@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <!----   Загрузка... -->
     <div class="preloader">
         <div class="loader">
             <span class="dot1"></span>
@@ -86,7 +87,7 @@
             </div>
         </div>
         <hr class="line">
-        <div class="tour__wrap"> 
+        <div class="tour__wrap-reverse"> 
             <div class="tour__wrap-left">
                 <h3 class="tour__title">Шаговая конная прогулка по лесу "К Царским воротам", 7 км</h3>
                 <p class="tour__content-price">1500 рублей</p>
@@ -119,7 +120,7 @@
                 </div>
             </div>
             <hr class="line">
-            <div class="tour__wrap">
+            <div class="tour__wrap-reverse">
             <div class="tour__wrap-left">
                 <h3 class="tour__title">Конная прогулка для опытных всадников, 15 км</h3>
                 <p class="tour__content-price">2000 рублей</p>
@@ -224,7 +225,7 @@
                 <h2 class="feedback__title">Оставить отзыв</h2>
                 <form class="form feedback__form" action="#" method="post">
                     <label class="form__desc" for="username">Как к вам обращаться?</label>
-                    <input class="form__field" type="text" name="name" id="username" required>
+                    <input class="form__field" type="text" name="name" placeholder="Имя" id="username_feedback" required>
     
                     <label class="form__desc" for="city">Из какого вы города?</label>
                     <input class="form__field" type="text" name="city" id="city" required>
@@ -232,7 +233,7 @@
                     <label class="form__desc" for="impression">Ваши впечатления после поездки</label>
                     <input class="form__field" type="text" name="impression" id="impression" required>
     
-                <button class="form__button button" type="button">Отправить</button></form>
+                <button class="form__button button" type="submit">Отправить</button></form>
         </section>
         </div>
     </main>
@@ -291,13 +292,14 @@
             <form class="popup__form form" action="#" method="post">
                 <label class="form__desc" for="name">Как к вам обращаться?</label>
                 <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
-                <input class="form__field" type="text" name="name" id="name" required>
+                <input class="form__field" type="text" name="name" placeholder="Имя" id="name" required>
 
                 <label class="form__desc" for="telephone">Телефон или WhatsApp</label>
                 <!--img src="images/tel_form.svg" alt="Иконка телефона" width="18" height="18" Иконка в поле ввода-->
                 <input class="form__field" type="tel" name="phone" id="telephone" required>
+                <p id="error-message" class="error-message"></p>
 
-                <button class="button button-popup" type="button">Отправить</button>
+                <button class="button button-popup" type="submit">Отправить</button>
             </form>
         </section>
         </div>
@@ -320,9 +322,10 @@
     
                     <label class="form__desc" for="username">Как к вам обращаться?</label>
                     <!--img src="images/user_form.svg" alt="Иконка юзера" width="20" height="20" Иконка в поле ввода-->
-                    <input class="form__field" type="text" name="name" id="username" required>
-    
-                    <button class="button form__button" type="button">Забронировать</button>
+                    <input class="form__field" type="text" name="name" placeholder="Имя" id="username" required>
+
+                    <p id="error-message" class="error-message"></p>
+                    <button class="button form__button" type="submit">Забронировать</button>
                 </form>
             </section>
         </div>

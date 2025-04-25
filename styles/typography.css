@@ -131,6 +131,7 @@
 }
 
 .booking {
+    position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     width: 600px;
@@ -147,26 +148,15 @@
 
 .booking__title {
     margin-left: 120px;
+    padding-top: 50px;
 }
 
 .booking__close {
     background-color: #037E8C;
-}
-
-.feedback {
-    background-color: #ffffff;
-    border-radius: 10px;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 420px;
-}
-
-.feedback__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
 }
 
 /* scroll-up */

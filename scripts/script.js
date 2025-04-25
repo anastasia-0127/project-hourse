@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     //объявляем переменную modalApplication и сохраняем в нее модальное окно, которое хотим увидеть
     const modalApplication = document.querySelector(".popup__wrap");
-    
+
     //Если есть такая кнопка и модальное окно
     if (welcоmeButtonModal && modalApplication) {
         console.log('Константа welcоmeButtonModal и modalApplication существует');
@@ -214,7 +214,43 @@ document.addEventListener('DOMContentLoaded', () => {
             modalApplication.setAttribute("hidden", true)
         }
     });
-    }
+
+    //Объявляем переменную closeModalButton и сохраняем в нее кнопку c классом popup__close
+    const closeModalButton = document.querySelector(".popup__close");
+    //Для кнопки «Закрыть» добавляем обработчик события клика по этой кнопке:
+    closeModalButton.addEventListener("click", () => {
+    
+        // Добавляем атрибут hidden у модального окна modalApplication и модальное окно становится невидимым
+        modalApplication.setAttribute("hidden", true);
+    });
+
+    // Отправка данных при заявке
+
+    modalApplication.addEventListener('submit', event => {
+        event.preventDefault(); // Предотвращаем отправку формы
+            
+        const name = modalApplication.querySelector('#name').value;
+        const phone = modalApplication.querySelector('#telephone').value;
+    
+        const errorMessage = modalApplication.querySelector('.error-message');
+    
+        if (phone.length > 12) {
+            errorMessage.textContent = 'Неправильно набран номер';
+            errorMessage.style.color = 'red';
+            return;
+        }
+
+        // Отправка данных на сервер
+        errorMessage.textContent = 'Заявка отправлена!';
+        errorMessage.style.color = 'green';
+            
+        // Запишем Имя
+        window.localStorage.setItem("#name", name);
+
+        // Запишем Номер
+        window.localStorage.setItem("#telephone", phone);
+    });
+};
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -259,20 +295,22 @@ document.addEventListener('DOMContentLoaded', () => {
     //Если есть такая кнопка c классом header__item-button и модальное окно
     if (headerButtonModal && modalBooking) {
         console.log('Константа headerButtonModal и modalBooking существует');
-    //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
-        headerButtonModal.addEventListener("click", () => {
-    // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
-          modalBooking.removeAttribute("hidden");
-        });
+
+        //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
+         headerButtonModal.addEventListener("click", () => {
+        // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
+              modalBooking.removeAttribute("hidden");
+            });
 
     //Если есть такая кнопка c классом footer__item-button и модальное окно
     if (footerButtonModal && modalBooking) {
         console.log('Константа footerButtonModal и modalBooking существует');
-    //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
-        footerButtonModal.addEventListener("click", () => {
-    // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
-          modalBooking.removeAttribute("hidden");
-        });
+
+        //Для кнопки «Бронирование» добавляем обработчик события клика по этой кнопке:
+            footerButtonModal.addEventListener("click", () => {
+        // удаляем атрибут hidden у модального окна modalBooking и модальное окно становится видимым
+            modalBooking.removeAttribute("hidden");
+            });
     
     // добавляем обработчик события при клике вне области формы. Тогда каждый раз, когда пользователь кликает где-либо на фоне вокруг появившейся формы, будет вызываться функция,
     window.addEventListener("click", (event) => {
@@ -282,7 +320,51 @@ document.addEventListener('DOMContentLoaded', () => {
             modalBooking.setAttribute("hidden", true)
         }
     });
-    }}
+
+    //Объявляем переменную closeModalButton и сохраняем в нее кнопку c классом booking__close
+    const closeModalButton = document.querySelector(".booking__close");
+    //Для кнопки «Закрыть» добавляем обработчик события клика по этой кнопке:
+    closeModalButton.addEventListener("click", () => {
+
+    // Добавляем атрибут hidden у модального окна modalBooking и модальное окно становится невидимым
+        modalBooking.setAttribute("hidden", true);
+    });
+
+    // Отправка данных при бронировании
+
+    modalBooking.addEventListener('submit', event => {
+        event.preventDefault(); // Предотвращаем отправку формы
+            
+        const name = modalBooking.querySelector('#username').value;
+        const phone = modalBooking.querySelector('#phone').value;
+        const number = modalBooking.querySelector('#number').value;
+    
+        const errorMessage = modalBooking.querySelector('.error-message');
+    
+        if (phone.length > 12) {
+            errorMessage.textContent = 'Неправильно набран номер';
+            errorMessage.style.color = 'red';
+            return;
+        }
+
+        if (number.length > 2 ) {
+            errorMessage.textContent = 'Максимальное число 10 человек';
+            errorMessage.style.color = 'red';
+            return;
+        }
+
+        // Отправка данных на сервер
+        errorMessage.textContent = 'Бронирование прошло успешно!';
+        errorMessage.style.color = 'green';
+            
+        // Запишем Имя
+        window.localStorage.setItem("#username", name);
+
+        // Запишем Номер
+        window.localStorage.setItem("#phone", phone);
+    });
+    };
+    };
 });
 
     /*8. Формирование объекта из элементов раздела и вывод блока динамически*/
@@ -400,19 +482,24 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* 10. Прелоадер*/
+
     const preloader = document.querySelector(".preloader");
     const content = document.querySelector(".content");
-    if (preloader&&content) {
+    if (preloader && content) {
         setTimeout(() => {
-            // Скрываемпрелоадер
+
+            // Скрываем прелоадер
             preloader.style.opacity = "0";
             preloader.style.visibility = "hidden";
     
-            // Показываемконтент
+            // Показываем контент
             content.style.display = "block";
     
-            // Удаляемэлементиз DOM
+            // Удаляем элемент из DOM
             preloader.remove();
+
         }, 3000); // Задержка 3 секунды
     }
     })

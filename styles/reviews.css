@@ -51,3 +51,30 @@
     width: 60%;
     padding: 10px;
 }
+
+.feedback__wrap {
+    background-size: cover;
+    background-image: linear-gradient(180deg,rgba(210, 197, 197, 0.547),rgba(227, 216, 216, 0.656)),url("../images/forest1.jpg");
+}
+
+.feedback {
+    background-color: transparent;
+    border-radius: 10px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 470px;
+}
+
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-left:50px;
+}
+
+.feedback__title {
+    padding-top: 20px;
+    padding-left: 50px;
+}
