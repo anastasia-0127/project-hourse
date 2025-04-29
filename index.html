@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конные прогулки</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -152,35 +153,60 @@
                 </div>
             </div>
         </section>
-        <section  class="gallery section" id="gallery">
+        <section class="gallery section swiper" id="gallery">
             <h2 class="gallery__title section__title">Галерея</h2>
-            <div class="gallery__swiper">
-            <button class="gallery__button-left">
-                <img class="gallery__button-left-img" src="images/left.svg" alt="Стрелка влево" class="gallery__left-swiper" width="130" height="250">
-            </button> 
-                <div class="gallery__list">
-                <img class="gallery__item" src="images/trip/trip1.jpg" alt="Фото с прогулки" width="300" height="400"> 
-                <img class="gallery__item" src="images/trip/trip2.jpg" alt="Фото с прогулки" width="300" height="400"> 
-                <img class="gallery__item" src="images/trip/trip3.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip4.jpg" alt="Фото с прогулки" width="300" height="400"> 
-                <img class="gallery__item" src="images/trip/trip6.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip7.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip8.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip9.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip10.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip11.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip12.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip13.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip14.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip15.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip16.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip17.jpg" alt="Фото с прогулки" width="300" height="400">
-                <img class="gallery__item" src="images/trip/trip18.jpg" alt="Фото с прогулки" width="300" height="400">
-                </div>
-                <button class="gallery__button-right">
-                    <img class="gallery__button-right-img" src="images/right.svg" alt="Стрелка вправо" class="gallery__right-swiper" width="130" height="250">
-                </button>
-            </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip1.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip2.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip3.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip4.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                     <div class="swiper-slide">
+                       <img src="images/trip/trip6.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip7.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip8.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip9.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                     <div class="swiper-slide">
+                       <img src="images/trip/trip10.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip11.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip12.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip13.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                     <div class="swiper-slide">
+                       <img src="images/trip/trip14.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip15.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip16.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                    </div>
+                    <div class="swiper-slide">
+                       <img src="images/trip/trip17.jpg" alt="Фото с прогулки" width="300" height="400"> 
+                </div></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </section>
         <section class="reviews section" id="reviews">
             <h2 class="reviews__title section__title">Отзывы</h2>
@@ -217,7 +243,7 @@
                     <img class="reviews__user-avatar" src="images/Irina_Lebedeva.jpg" alt="Аватар комментатора" width="380" height="380" loading="lazy">
                     <p class="reviews__user-name">Отзыв 2</p>
                     <p class="reviews__user-location">Козьмодемьянск</p>
-                </div>
+            </div>
             </div>
         </section>
         <div class="feedback__wrap">
@@ -349,6 +375,7 @@
         </button>
         <!--/ Scrollup -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

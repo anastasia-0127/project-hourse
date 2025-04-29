@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('Скрипт отработал корректно')
 });
 
-document.addEventListener("DOMContentLoaded", () => {
 
     /* 1. Ручная прокрутка элементов Галереи с помощью стрелок*/
+    
+    /* Реализовано при помощи карусели swiper
     
     const slider = document.querySelectorAll(".gallery__item");     // создаем переменную находя блок по классу
 
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         *   Блок-схема: /images/block_schema.gallery.png
         */
 
-// Переменная, которая хранит текущий индекс первой карточки, отображаемой в слайдере. Изначально она равна 0, что означает, что первая карточка будет видна.
+/*// Переменная, которая хранит текущий индекс первой карточки, отображаемой в слайдере. Изначально она равна 0, что означает, что первая карточка будет видна.
 let currentIndex = 0; 
 
 // объявляем переменную prevButton и сохраняем в нее кнопку для перехода к предыдущей группе карточек
@@ -94,10 +95,9 @@ function updateSlider() {
         }
     });
 }
-    }
-});
+    }*/
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     /* 2. Исключение накладывания контента на хедер при скроле/прокрутке страницы */
 
@@ -503,3 +503,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000); // Задержка 3 секунды
     }
     })
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* 11. Карусель с помощью библиотеки swiper  */
+        const slider = document.querySelector('.swiper');
+    
+        if (slider) {
+            const swiper = new Swiper(slider, {
+                // Дополнительные параметры
+                slidesPerView: 4, // Количество слайдов на экране
+                spaceBetween: 10, // Расстояние между слайдами
+                loop: true,  // Зацикливание слайдов
+    
+                // Пагинация
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+    
+                // Навигационные стрелки
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+})
